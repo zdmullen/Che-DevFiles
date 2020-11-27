@@ -1,0 +1,20 @@
+apiVersion: v2
+publisher: Broadcom
+name: bfg
+version: latest
+type: VS Code extension
+displayName: BFG
+title: BFG EXPLORER
+description: SOMETHING ABOUT BFG
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+category: Other
+spec:
+  containers:
+    - image: "quay.io/eclipse/che-sidecar-node:10-0cb5d78"
+      name: zowe-explorer
+      memoryLimit: "1500Mi"
+      env:
+       - name: ZOWE_CLI_HOME
+         value: /projects/.zowe
+  extensions:
+    - https://github.com/Alexandru-Dumitru/che-devfiles/releases/download/latest/broadcomMFD.bridge-for-git-explorer-0.1.0.vsix
