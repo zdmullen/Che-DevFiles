@@ -17,4 +17,4 @@ spec:
        - name: ZOWE_CLI_HOME
          value: /projects/.zowe
   extensions:
-    - https://github.com/Alexandru-Dumitru/che-devfiles/releases/download/latest/broadcomMFD.bridge-for-git-explorer-0.1.0.vsix
+    - https://github.com/zdmullen/Che-DevFiles/releases/download/latest/broadcomMFD.bridge-for-git-explorer-0.1.0.vsix
