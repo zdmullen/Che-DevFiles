@@ -1,0 +1,21 @@
+apiVersion: v2
+publisher: Broadcom
+name: zowe
+version: latest
+type: VS Code extension
+displayName: Zowe
+title: Zowe VS Code extension, powered by Zowe CLI
+description: VS Code extension, powered by Zowe CLI, that streamlines interaction with mainframe data sets, USS files, and jobs.
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+repository: https://github.com/zowe/vscode-extension-for-zowe.git
+category: Other
+spec:
+  containers:
+    - image: "quay.io/eclipse/che-sidecar-node:10-0cb5d78"
+      name: zowe-explorer
+      memoryLimit: "1500Mi"
+      env:
+       - name: ZOWE_CLI_HOME
+         value: /projects/.zowe
+  extensions:
+    - http://zowe-jenkins.bpc.broadcom.net/job/rijfe01-test/job/master/9/artifact/dist/vscode-extension-for-zowe-1.11.0.vsix
